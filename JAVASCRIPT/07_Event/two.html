@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+          <h1>Asnychronous </h1>
+          <button id="stop">Stop </button>
+    </body>
+    <script>
+        // setTimeout(() => {
+        //     console.log("Iqbal");
+        // }, 2000);
+
+        const sayIqbal = function() {
+            console.log("Iqbal");
+        }
+        const changeText = function () {
+            document.querySelector('h1').innerHTML = "learning js "
+        }
+       
+
+        const changeMe =setTimeout(changeText,4000)
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(changeMe)
+            console.log("stopped");
+        })
+    </script>
+</html>
