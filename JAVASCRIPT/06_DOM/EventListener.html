@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lerning Dom</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="block">
+            <p class="paragraph">Welcome to my website</p>
+          </nav>
+          <div class="block">
+            <h4 id="intro">Hey There , My name is <span  id="username">Md Iqbal Ali</span></h4>
+            <p class="paragraph">I am learning Dom manipalutation</p>
+            <pre><code>console.log('Hey There')</code></pre>
+          </div>
+
+          <div>
+            <h1>you are the boss</h1>
+          </div>
+
+          <!-- <button onclick="console.log('hey I am clicked ');">Click Me</button> -->
+
+          <button id="clickbutton">Click Me</button>
+
+          <script>
+            //    const clickbutton = document.getElementById("clickbutton");
+            //    const overColor = document.getElementById("intro");
+
+            //    clickbutton.addEventListener('click',() => {
+        
+            //            overColor.style.color ="blue"; 
+            //    })
+
+            //    clickbutton.addEventListener('click',() => {
+            //             if (overColor.style.color === "blue") {
+            //                 overColor.style.color ="red"
+            //             }else{
+            //                 overColor.style.color ="blue"
+            //             }
+                        
+            //    })
+
+            //    clickbutton.addEventListener('mouseover',() => {
+            //            document.getElementById("intro").style="color:red;"
+            //    })
+
+            const allChildren = document.querySelector("body").children
+
+            for (let i = 0; i <allChildren.length; i++) {
+                allChildren.item(i).addEventListener("click",() => {
+                    allChildren.item(i).remove();
+                });
+                
+            }
+
+       
+
+               
+          </script>
+    </body>
+</html>
